@@ -28,7 +28,7 @@ class InvoicesController extends Controller
 
      $invoice->save();
 
-     return redirect()->route('invoices.index');
+     return redirect()->route('invoices.index')-> with('message', 'Invoice Added Successfully');
      
    }
 }
