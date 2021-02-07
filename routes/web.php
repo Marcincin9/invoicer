@@ -19,5 +19,6 @@ Route::get('/', function () {
 
 Route::get('/invoices', [InvoicesController::class, 'index'])->name('invoices.index');
 Route::get('/invoices/create', [InvoicesController::class, 'create'])->name('invoices.create');
+Route::get('/invoices/edit{id}', [InvoicesController::class, 'edit'])->name('invoices.edit');
 Route::post('/invoices/save', [InvoicesController::class, 'store'])->name('invoices.store');
-
+Route::put('/invoices/change{id}', [InvoicesController::class, 'update'])->name('invoices.update');
